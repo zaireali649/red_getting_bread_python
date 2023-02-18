@@ -1,44 +1,50 @@
 import random
 
 #%%
-# Basics
 
-number = random.randint(0,10)
+def compare_number_thresh(number, thresh):
+    if(number < thresh): 
+        return("small number")
+    elif(number > thresh): 
+        return("big number")
+    else: # Nothing
+        return(" ".join(["number is", str(thresh)]))
 
-if(number < 6):
-    print("small number")
-elif(number > 6):
-    print("big number")
-else: # elif(number == 6):
-    print("number is 6")
-    
-print(number)
+if(__name__ == '__main__'):
+    # Basics
 
-#%%
-# Adv
+    number = random.randint(0,10)
 
-number = random.randint(0,10)
+    if(number < 6):
+        print("small number")
+    elif(number > 6):
+        print("big number")
+    else: # elif(number == 6):
+        print("number is 6")
+        
+    print(number)
 
-if(number < 9): # 0,1,2,3,4,5,6,7,8
-    print("small number")
-elif(number > 4): # 9,10
-    print("big number")
-else: # Nothing
-    print("number is 6")
-    
-print(number)
+    #%%
+    # Adv
 
-#%%
-# Error Knowledge
+    number = random.randint(0,10)
 
-number = random.randint(0,10)
-thresh = 4
+    if(number < 9): # 0,1,2,3,4,5,6,7,8
+        print("small number")
+    elif(number > 4): # 9,10
+        print("big number")
+    else: # Nothing
+        print("number is 6")
+        
+    print(number)
 
-if(number < thresh): 
-    print("small number")
-elif(number > thresh): 
-    print("big number")
-else: # Nothing
-    print("number is", thresh)
-    
-print(number)
+    #%%
+    # Error Knowledge
+
+    number = random.randint(0,10)
+    thresh = 4
+
+    response = compare_number_thresh(number, thresh)
+    print(response)
+        
+    print(number)
